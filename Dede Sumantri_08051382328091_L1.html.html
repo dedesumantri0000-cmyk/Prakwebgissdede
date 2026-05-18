@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mata kuliah Web GIS Kelautan - Dede Sumantri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #004d40;
+            --secondary: #00796b;
+            --accent: #00bcd4;
+            --light-bg: #f0f4f8;
+            --white: #ffffff;
+            --shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.8; 
+            color: #444; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0; 
+            background-color: var(--light-bg); 
+        }
+
+        /* Hero Header */
+        header { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
+        header p { opacity: 0.9; font-size: 1.2em; margin-top: 10px; }
+
+        /* Identitas Card */
+        .identitas { 
+            background: var(--white); 
+            padding: 30px; 
+            margin: -60px 20px 40px 20px;
+            border-radius: 15px; 
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-item { border-left: 4px solid var(--accent); padding-left: 15px; }
+        .info-item label { display: block; font-size: 0.8em; color: #888; text-transform: uppercase; font-weight: bold; }
+        .info-item span { font-weight: 600; color: var(--primary); }
+
+        /* Content Sections */
+        .section { 
+            background: var(--white); 
+            padding: 40px; 
+            margin: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+
+        h2 { 
+            color: var(--primary); 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 15px;
+        }
+
+        h2 i { color: var(--accent); }
+
+        h3 { color: var(--secondary); margin-top: 30px; }
+
+        /* Workflow Visual */
+        .workflow { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 15px; 
+            margin: 30px 0;
+        }
+
+        .step { 
+            background: #e0f2f1; 
+            padding: 15px 25px; 
+            border-radius: 50px; 
+            border: 1px solid var(--secondary); 
+            width: 85%; 
+            text-align: center; 
+            font-weight: 500; 
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover { transform: scale(1.02); background: var(--secondary); color: white; }
+
+        .arrow { color: var(--accent); font-size: 24px; }
+
+        /* Images & Tables */
+        .img-container { 
+            text-align: center; 
+            margin: 30px 0; 
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .img-container img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .caption { 
+            display: block;
+            margin-top: 15px; 
+            font-size: 0.95em; 
+            color: #555; 
+            font-weight: 600;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; overflow: hidden; border-radius: 10px; }
+        th { background-color: var(--secondary); color: white; padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+        tr:hover { background-color: #f9f9f9; }
+
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            color: #888; 
+            font-size: 0.9em; 
+        }
+
+        @media (max-width: 768px) {
+            .identitas { margin-top: -30px; }
+            .section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fas fa-anchor"></i> WEB GIS KELAUTAN</h1>
+    <p>Program Studi Ilmu Kelautan • Universitas Sriwijaya</p>
+</header>
+
+<div class="identitas">
+    <div class="info-item">
+        <label>Nama Mahasiswa</label>
+        <span>Dede Sumantri</span>
+    </div>
+    <div class="info-item">
+        <label>NIM</label>
+        <span>08051382328091</span>
+    </div>
+    <div class="info-item">
+        <label>Kelas</label>
+        <span>L1 / A</span>
+    </div>
+    <div class="info-item">
+        <label>Dosen Pengampu</label>
+        <span>AKHMAD TRI PRASETYO, S.Kel., M.Si</span>
+    </div>
+</div>
+
+<div class="section">
+    <h2><i class="fas fa-book"></i> I. PENDAHULUAN</h2>
+    <h3>1.1 Landasan Teori</h3>
+    <p>Sistem Informasi Geografi (SIG) adalah sistem berbasis perangkat lunak untuk mengelola dan memvisualisasikan data berbasis lokasi. Dalam konteks kelautan, SIG mengintegrasikan data kedalaman (batimetri) dan alat bantu navigasi untuk keselamatan pelayaran.</p>
+    
+    
+    
+    <h3>1.2 Tujuan dan Manfaat</h3>
+    <ul>
+        <li>Menganalisis berbagai jenis data spasial primer dari lapangan.</li>
+        <li>Pemanfaatan platform digital untuk penyediaan data kawasan pesisir.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2><i class="fas fa-cogs"></i> II. METODOLOGI</h2>
+    <div class="workflow">
+        <div class="step">Buka Aplikasi Navigo by Amigo</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Registrasi & Download Area Zona D</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Setting Unit Satuan Koordinat</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Pengambilan Data Marine Platform</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Input Excel & Konversi ke .txt</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Import ke ArcGIS & Simbolisasi</div>
+        <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+        <div class="step">Final Layouting Peta</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2><i class="fas fa-chart-pie"></i> III. HASIL DAN PEMBAHASAN</h2>
+    <h3>3.1 Analisis Data Navigo by Amigo</h3>
+    <p>Aplikasi ini memungkinkan akuisisi data navigasi secara <i>real-time</i> dengan akurasi tinggi, mencakup visualisasi kedalaman dan posisi kapal.</p>
+    
+    <div class="img-container">
+        <img src="tampilan_navigo.jpg" alt="Tampilan Navigo by Amigo">
+        <span class="caption">Gambar 1: Antarmuka Navigo by Amigo (Data Spasial Real-time)</span>
+    </div>
+
+    <h3>3.2 Tabel Komponen Peta Marine Platform</h3>
+    <table>
+        <thead>
+            <tr>
+                <th><i class="fas fa-map-marker-alt"></i> Komponen Spasial</th>
+                <th><i class="fas fa-info-circle"></i> Fungsi / Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lateral Buoy (Red/Green)</td>
+                <td>Penanda batas sisi kiri dan kanan alur pelayaran.</td>
+            </tr>
+            <tr>
+                <td>Lighthouse</td>
+                <td>Sarana bantu navigasi cahaya untuk kapal besar.</td>
+            </tr>
+            <tr>
+                <td>Marine Pilot Station</td>
+                <td>Titik layanan pemanduan kapal masuk ke pelabuhan.</td>
+            </tr>
+            <tr>
+                <td>Isolated Danger Beacon</td>
+                <td>Penanda adanya bahaya tersembunyi di bawah air.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="img-container">
+        <img src="layout_peta.jpg" alt="Layout Peta Akhir">
+        <span class="caption">Gambar 2: Hasil Akhir Layout Peta Marine Platform Zona D</span>
+    </div>
+</div>
+
+<div class="section">
+    <h2><i class="fas fa-check-circle"></i> IV. KESIMPULAN</h2>
+    <p>Integrasi antara data lapangan dari <strong>Navigo by Amigo</strong> dan pengolahan <strong>ArcGIS</strong> terbukti efektif dalam memetakan fasilitas keselamatan navigasi laut secara informatif dan akurat.</p>
+</div>
+
+<footer>
+    <p>&copy; 2026 - Laporan Praktikum Web GIS Kelautan<br>Jurusan Ilmu Kelautan, UNSRI</p>
+</footer>
+
+</body>
+</html>
